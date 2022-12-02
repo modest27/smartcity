@@ -18,7 +18,7 @@ import axesHelper from '@/three/axesHelper'
 // 导入轨道控制器
 import controls from '@/three/controls'
 // 导入 dat.gui
-import gui from '@/three/gui'
+// import gui from '@/three/gui'
 // 导入初始化屏幕调整事件
 import '@/three/init'
 // 导入每一帧的执行函数
@@ -31,7 +31,7 @@ let sceneDiv = ref(null)
 // 添加相机
 scene.add(camera);
 // 添加辅助坐标轴
-scene.add(axesHelper);
+// scene.add(axesHelper);
 // 创建物体
 createMesh()
 
@@ -50,5 +50,6 @@ onMounted(()=>{
   top: 0;
   left: 0;
   z-index: 100;
+  background-color: black;
 }
 </style>
