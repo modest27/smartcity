@@ -6,6 +6,8 @@ import FlyLine from './FlyLine';
 import FlyLineShader from './FlyLineShader';
 import MeshLine from './MeshLine';
 import LightWall from './LightWall';
+import LightRadar from './LightRadar';
+import AlarmSprite from './AlarmSprite';
 
 export default function createCity(){
   const gltfLoader = new GLTFLoader();
@@ -13,9 +15,8 @@ export default function createCity(){
     
     gltf.scene.traverse((item)=>{
       if(item.type == 'Mesh'){
-        console.log(item);
         const cityMaterial = new THREE.MeshBasicMaterial({
-          color: new THREE.Color(0x0c0e6f)
+          color: new THREE.Color(0x1A1145)
         })
         item.material = cityMaterial
         modifyCityMaterial(item);
@@ -35,11 +36,23 @@ export default function createCity(){
     scene.add(flyLine.mesh);
 
     // 添加着色器飞线
-    const flyLineShader = new FlyLineShader();
-    scene.add(flyLineShader.mesh);
+    // const flyLineShader = new FlyLineShader();
+    // scene.add(flyLineShader.mesh);
 
     // 添加光墙
-    const lightWall = new LightWall();
-    scene.add(lightWall.mesh);
+    // const lightWall = new LightWall();
+    // scene.add(lightWall.mesh);
+
+    // 添加雷达
+    // const lightRadar = new LightRadar();
+    // scene.add(lightRadar.mesh);
+
+    // 添加警告标识
+    // const alarmSprite = new AlarmSprite();
+    // scene.add(alarmSprite.mesh);
+    // alarmSprite.onClick(function(e){
+    //   console.log('警告',e);
+    //   alert('警告：电力有问题！')
+    // })
   })
 }

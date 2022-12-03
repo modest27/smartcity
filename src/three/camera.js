@@ -4,7 +4,7 @@ import * as THREE from 'three'
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,50000);
 
 // 调整相机位置
-camera.position.set(0,0,20);
+camera.position.set(5,10,10);
 
 export default camera
 
